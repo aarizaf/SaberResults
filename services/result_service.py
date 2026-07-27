@@ -1,15 +1,13 @@
 from typing import List
-from models.result import ObtenerGrupos
-from sdk import get_supabase
+from models.result import ObtenerInfo
+from sdk import supabase
 
 
-def obtener_grupos(body: ObtenerGrupos):
+def obtener_infoclte(body: ObtenerInfo):
     response = (
-        get_supabase()
+        supabase()
         .table("resultados_nivelacion")
-        .select("grupo")
-        .eq("grupo", body.grupo)
-        .gte("promedio", str(body.promedio))
+        .select("grupo", "promedio")
         .eq("nombre", body.nombre)
         .execute()
     )

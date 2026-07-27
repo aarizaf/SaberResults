@@ -9,7 +9,7 @@ router = APIRouter(prefix="/SaberResults", tags=["Results"])
 
 
 
-@router.post("/obtenerGrupos")
-def obtener_grupos(body: ObtenerGrupos):
-    return result_service.obtener_grupos(body)
+@router.post("/obtenerInfoclte")
+def obtener_infoclte(body: ObtenerGrupos):
+    return result_service.obtener_infoclte(body)
 

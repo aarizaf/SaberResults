@@ -7,7 +7,7 @@ load_dotenv()
 _client: Client | None = None
 
 
-def get_supabase() -> Client:
+def supabase() -> Client:
     global _client
     if _client is None:
         url = os.environ["SUPABASE_URL"]
