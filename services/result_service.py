@@ -14,6 +14,17 @@ def obtener_infoclte(body: ObtenerInfo):
     return response["data"]
 
 
+def obtener_grupos(body: ObtenerInfo):
+    response = (
+        supabase()
+        .table("resultados_nivelacion")
+        .select("grupo")
+        .eq("grupo", body.grupo)
+        .execute()
+    )
+    return response["data"]
+
+
 
 
 
