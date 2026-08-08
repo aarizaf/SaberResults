@@ -4,7 +4,7 @@ from sdk import supabase
 
 
 
-def crearProfesor(body: CrearUsuario):
+def crearUsuario(body: CrearUsuario):
     if body.usuario=="profesor":
         tabla = "profesor_enc"
     elif body.usuario=="estudiante":

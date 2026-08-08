@@ -9,10 +9,10 @@ router = APIRouter(prefix="/SaberResults", tags=["Resultados"])
 
 
 
-@router.post("/crearProfesor")
+@router.post("/crearUsuario")
 def crear_usuario(body: CrearUsuario):
     try:
-        data = humboldt_service.crearProfesor(body)
+        data = humboldt_service.crearUsuario(body)
         if data is None:
             return JSONResponse(
                 content={"success": False, "detail": "No se pudo crear el usuario. El usuario ya existe en la base de datos."}, status_code=404)
