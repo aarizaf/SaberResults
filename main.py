@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes.results import router
+from routes.humboldt_routes import router
 
 app = FastAPI(title="SaberResults API")
 

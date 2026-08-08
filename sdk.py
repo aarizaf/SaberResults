@@ -14,3 +14,6 @@ def supabase() -> Client:
         key = os.environ["SUPABASE_KEY"]
         _client = create_client(url, key)
     return _client
+
+
+
